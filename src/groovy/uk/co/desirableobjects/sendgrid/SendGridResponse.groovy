@@ -9,7 +9,7 @@ class SendGridResponse {
     boolean successful
     List<String> errors
 
-    static SendGridResponse parse(JSON response) {
+    static SendGridResponse parse(Map response) {
 
         boolean success = determineResult(response)
         List<String> errorMessages = parseErrorMessages(response)
@@ -22,7 +22,7 @@ class SendGridResponse {
         return !errors.isEmpty()
     }
 
-    private static boolean determineResult(JSON response) {
+    private static boolean determineResult(Map response) {
         return (response.message == 'success')
     }
 

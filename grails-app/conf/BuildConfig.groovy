@@ -22,7 +22,7 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        runtime 'org.codehaus.groovy.modules.http-builder:http-builder:0.5.1', {
+        runtime 'org.codehaus.groovy.modules.http-builder:http-builder:0.6', {
             excludes 'xml-apis', 'groovy'
         }
         test 'org.gmock:gmock:0.8.2'
